@@ -1,0 +1,133 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+FormatException: FormatException: Unexpected extension byte (at offset 25)
+
+```
+#0      _Utf8Decoder.convertChunked (dart:convert-patch/convert_patch.dart:1887:7)
+#1      _Utf8ConversionSink.addSlice (dart:convert/string_conversion.dart:314:28)
+#2      _Utf8ConversionSink.add (dart:convert/string_conversion.dart:310:5)
+#3      _ConverterStreamEventSink.add (dart:convert/chunked_conversion.dart:72:18)
+#4      _SinkTransformerStreamSubscription._handleData (dart:async/stream_transformers.dart:111:24)
+#5      _rootRunUnary (dart:async/zone.dart:1362:47)
+#6      _CustomZone.runUnary (dart:async/zone.dart:1265:19)
+#7      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1170:7)
+#8      _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:341:11)
+#9      _BufferingStreamSubscription._add (dart:async/stream_impl.dart:271:7)
+#10     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:733:19)
+#11     _StreamController._add (dart:async/stream_controller.dart:607:7)
+#12     _StreamController.add (dart:async/stream_controller.dart:554:5)
+#13     _Socket._onData (dart:io-patch/socket_patch.dart:2144:41)
+#14     _rootRunUnary (dart:async/zone.dart:1370:13)
+#15     _CustomZone.runUnary (dart:async/zone.dart:1265:19)
+#16     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1170:7)
+#17     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:341:11)
+#18     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:271:7)
+#19     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:733:19)
+#20     _StreamController._add (dart:async/stream_controller.dart:607:7)
+#21     _StreamController.add (dart:async/stream_controller.dart:554:5)
+#22     new _RawSocket.<anonymous closure> (dart:io-patch/socket_patch.dart:1680:33)
+#23     _NativeSocket.issueReadEvent.issue (dart:io-patch/socket_patch.dart:1192:14)
+#24     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#25     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#26     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:120:13)
+#27     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:185:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.0.3, on Mac OS X 10.15.2 19C57 darwin-x64, locale en-GB)
+    • Flutter version 2.0.3 at /Users/earl/Developer/flutter
+    • Framework revision 4d7946a68d (10 days ago), 2021-03-18 17:24:33 -0700
+    • Engine revision 3459eb2436
+    • Dart version 2.12.2
+
+[!] Android toolchain - develop for Android devices (Android SDK version 29.0.3)
+    • Android SDK at /Users/earl/Library/Android/sdk
+    • Platform android-30, build-tools 29.0.3
+    • ANDROID_HOME = /Users/earl/Library/Android/sdk
+    • Java binary at: /Applications/Android
+      Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build
+      1.8.0_212-release-1586-b4-5784211)
+    ! Some Android licenses not accepted.  To resolve this, run: flutter doctor
+      --android-licenses
+
+[!] Xcode - develop for iOS and macOS
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 11.3, Build version 11C29
+    ! Xcode 11.3.0 out of date (12.0.1 is recommended).
+      Download the latest version or update via the Mac App Store.
+    • CocoaPods version 1.10.0
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 3.6)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build
+      1.8.0_212-release-1586-b4-5784211)
+
+[✓] VS Code (version 1.54.3)
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Flutter extension version 3.20.0
+
+[☠] Connected device (the doctor check crashed)
+    ✗ Due to an error, the doctor check did not complete. If the error message below is
+      not helpful, please let us know about this issue at
+      https://github.com/flutter/flutter/issues.
+    ✗ FormatException: Unexpected extension byte (at offset 25)
+    • #0      _Utf8Decoder.convertChunked
+      (dart:convert-patch/convert_patch.dart:1887:7)
+      #1      _Utf8ConversionSink.addSlice (dart:convert/string_conversion.dart:314:28)
+      #2      _Utf8ConversionSink.add (dart:convert/string_conversion.dart:310:5)
+      #3      _ConverterStreamEventSink.add
+      (dart:convert/chunked_conversion.dart:72:18)
+      #4      _SinkTransformerStreamSubscription._handleData
+      (dart:async/stream_transformers.dart:111:24)
+      #5      _rootRunUnary (dart:async/zone.dart:1362:47)
+      #6      _CustomZone.runUnary (dart:async/zone.dart:1265:19)
+      #7      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1170:7)
+      #8      _BufferingStreamSubscription._sendData
+      (dart:async/stream_impl.dart:341:11)
+      #9      _BufferingStreamSubscription._add (dart:async/stream_impl.dart:271:7)
+      #10     _SyncStreamControllerDispatch._sendData
+      (dart:async/stream_controller.dart:733:19)
+      #11     _StreamController._add (dart:async/stream_controller.dart:607:7)
+      #12     _StreamController.add (dart:async/stream_controller.dart:554:5)
+      #13     _Socket._onData (dart:io-patch/socket_patch.dart:2144:41)
+      #14     _rootRunUnary (dart:async/zone.dart:1370:13)
+      #15     _CustomZone.runUnary (dart:async/zone.dart:1265:19)
+      #16     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1170:7)
+      #17     _BufferingStreamSubscription._sendData
+      (dart:async/stream_impl.dart:341:11)
+      #18     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:271:7)
+      #19     _SyncStreamControllerDispatch._sendData
+      (dart:async/stream_controller.dart:733:19)
+      #20     _StreamController._add (dart:async/stream_controller.dart:607:7)
+      #21     _StreamController.add (dart:async/stream_controller.dart:554:5)
+      #22     new _RawSocket.<anonymous closure>
+      (dart:io-patch/socket_patch.dart:1680:33)
+      #23     _NativeSocket.issueReadEvent.issue
+      (dart:io-patch/socket_patch.dart:1192:14)
+      #24     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+      #25     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+      #26     _runPendingImmediateCallback
+      (dart:isolate-patch/isolate_patch.dart:120:13)
+      #27     _RawReceivePortImpl._handleMessage
+      (dart:isolate-patch/isolate_patch.dart:185:5)
+
+
+! Doctor found issues in 3 categories.
+```
